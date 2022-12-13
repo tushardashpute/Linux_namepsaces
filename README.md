@@ -12,12 +12,13 @@
 - The main purpose is to wrap some global resources in an abstraction so that it appears to the process it has its own isolated world from the rest of the processes running next to it.
 - The procress has no idea its running under one, it only knows about resources (CPU,Memory,Disk) given to it.
 
-Types of namespaces:
+**Types of namespaces:**
 
-- control group(cgroup) : 
-  The cgroup namespace is used by containers to isolate a set of processes into a virtual system at a OS level.
-  cgroup limits, isolates and measures reources usage of a group of processes.
-  cgroups can have there own set of quotas for memory,CPU,Network and I/O.
+- control group(cgroup): 
+  
+  - The cgroup namespace is used by containers to isolate a set of processes into a virtual system at a OS level.
+  - cgroup limits, isolates and measures reources usage of a group of processes.
+  - cgroups can have there own set of quotas for memory,CPU,Network and I/O.
   
 - Interprocess Communication (IPC)
 - Mount (mnt)
