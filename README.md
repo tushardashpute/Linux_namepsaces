@@ -49,4 +49,5 @@
   - UTS is used to isolate two system identifiers (nodename or hostnames) and domainname from one another
   - It is the UTS namepsace hwich allows containers to have their own hostname and domainname
  
+<img width="467" alt="image" src="https://user-images.githubusercontent.com/74225291/207245242-4c4c4af4-35e1-43ae-b20c-2d3f878ebc03.png">
 
