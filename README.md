@@ -21,9 +21,32 @@
   - cgroups can have there own set of quotas for memory,CPU,Network and I/O.
   
 - Interprocess Communication (IPC)
+  - IPC is more a security oriented namespaces.
+  - IPC is used to isolated inter-process communications so they can not accidentally accessed, or destroyed by another process which doesn’t have permission to use it.
+  
 - Mount (mnt)
+  - A mount namespace allows different veiws of the filesystem hierarchy.Anytime you are using mount or umount commance you are managing the mount namespace.
+
 - Network (net)
+  - A network namepsace provides isolation of the system resources associated with teh networking.
+  - Each namepsace has its own network device, IP address, IP routing tables, Port numbers etc
+  - The network namspace also provices additional features to containers by creating a virtual network devices which are assigned to specifice container.
+  - This is how docker can have multiple containers running each internally with a web-server assigned to port 80. 
+
 - Process ID (pid)
+  - Isoalated process by assigning different Pid's to processes executing each get's its own PID
+  - PID's are hierarchical every PID has a parent which nests from PID=1 
+  - This allows signal like the kill command to target a specific instance of a process.
+
 - Time (time)
+  - This is used by containers to allow them to set their data/time to be different from the main system and from each other,
+ 
 - User
+  - User namepsace isolated User and group ID number spaces from each other
+  - User namepsaces can be netsted : Allows a unpriv user to own the outer namespace, while granting root(priv access to internal ns)
+
 - UNIX Time Sharing (uts)
+  - UTS is used to isolate two system identifiers (nodename or hostnames) and domainname from one another
+  - It is the UTS namepsace hwich allows containers to have their own hostname and domainname
+ 
+
